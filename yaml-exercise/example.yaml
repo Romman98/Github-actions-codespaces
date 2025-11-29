@@ -1,0 +1,16 @@
+name: Ahmad Romman
+name: "Ahmad Romman" #for special characters
+age: 10
+
+config:
+  path: first-directory/file.yaml
+    environment: staging
+
+    arrays:
+      - element1
+        - element2
+          - element3
+            - name: Ahmad
+                age: 27
+                  - work: engineer
+                      status: active
