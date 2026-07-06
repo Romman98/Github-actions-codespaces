@@ -5,7 +5,9 @@ on:
   branches:
     = main
 
-job
+jobs:
   echo:
-    - name: echo
-      run: echo "Running whenever a PR is opened or synchronized and on base branch is main"
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: echo "Running whenever a PR is opened or synchronized and on base branch is main"
