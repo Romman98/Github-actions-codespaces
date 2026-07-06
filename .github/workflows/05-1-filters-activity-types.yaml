@@ -1,0 +1,11 @@
+name: "05 - 1 - Event Filters and Activity Types"
+on:
+  pull_request: 
+  types: [opened, synchronized]
+  branches:
+    = main
+
+job
+  echo:
+    - name: echo
+      run: echo "Running whenever a PR is opened or synchronized and on base branch is main"
