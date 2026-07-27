@@ -3,19 +3,20 @@ on:
   - push
   - workflow_dispatch
 run-name: "My custom workflow run name - ${{ runner.os }}"
+
 jobs:
   echo-data:
     runs-on: ubuntu-latest
     steps:
       - name: "Display Information"
         run: |
-          echo "Event name: "
-          echo "Ref: "
-          echo "SHA: "
-          echo "Actor: "
-          echo "Workflow: "
-          echo "Run ID: "
-          echo "Run number: "
+          echo "Event name: ${{ github.event_name}}"
+          echo "Ref: ${{ github.ref}}"
+          echo "SHA: ${{ github.sha}}"
+          echo "Actor: ${{ github.actor}}"
+          echo "Workflow: ${{ github.workflow}}"
+          echo "Run ID: ${{ github.run_id}}"
+          echo "Run number: ${{ github.run_number}}"
       - name: "Retrieve Variable"
         run: |
-          echo "${{ MY_VAR }}"
+          echo "${{ vars.MY_VAR }}"
