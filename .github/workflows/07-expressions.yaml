@@ -25,5 +25,5 @@ jobs:
           echo "I was triggered from main branch"
       - name: "Greeting"
         run: | 
-        echo "Hello, World!"
-        echo "${{ inputs.debug }}"
+          echo "Hello, World!"
+          echo "${{ inputs.debug }}"
