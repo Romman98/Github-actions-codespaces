@@ -19,10 +19,10 @@ jobs:
           echo "Branch: ${{ github.ref }}"
           echo "Commit SHA: ${{ github.sha }}"
           echo "Runner OS: ${{ runner.os }}"
-      - name: "[debug] Print when triggered from main"
-        if: ${{ inputs.debug && github.ref == 'refs/heads/main' }}
+      - name: "[debug] Print when triggered from master"
+        if: ${{ inputs.debug && github.ref == 'refs/heads/master' }}
         run: |
-          echo "I was triggered from main branch"
+          echo "I was triggered from master branch"
       - name: "Greeting"
         run: | 
           echo "Hello, World!"
