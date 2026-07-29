@@ -7,7 +7,7 @@ env:
   WORKFLOW_VAR: "I am a workflow env variable"
   OVERWRITTEN: "I will be overwritten"
 
-job:
+jobs:
   echo:
     runs-on: ubuntu-latest
     env:
@@ -29,4 +29,3 @@ job:
           OVERWRITTEN: "I have been overwritten at thhe step level"
         run: |
           echo "Step env var: ${{ env.OVERWRITTEN }}"
-          
